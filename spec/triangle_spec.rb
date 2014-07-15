@@ -46,6 +46,9 @@ describe Polygon do
       it "is a child of Polygon" do
         expect(Isosceles.ancestors).to include(Polygon)
       end
+      it "is a child of Triangle also" do
+        expect(Isosceles.ancestors).to include(Triangle)
+      end
     end
   end
 end
