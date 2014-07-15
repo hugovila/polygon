@@ -31,7 +31,7 @@ describe Polygon do
     it "all sides should be numbers" do
       expect{ Triangle.new(2, 4, "lado") }.to raise_error(ArgumentError)
     end
-    it "return its area" do
+    it "return its own area" do
       a = 2
       b = 3
       c = 4

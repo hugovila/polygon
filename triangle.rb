@@ -6,12 +6,19 @@ class Triangle < Polygon
   POLYGON_SIDES = TRIANGLE_SIDES
 
   def initialize *sides
+    @sides = sides
     check_sides(sides, my_number_of_sides)
     @bigger_side = sides.max
     @smaller_side = sides.min
     @medium_sides = sides[1]
     check_closed
     check_positive sides
+  end
+
+  def perimeter
+    result = 0
+    @sides.collect { |side| result = result + side }
+    result
   end
 
   def area
