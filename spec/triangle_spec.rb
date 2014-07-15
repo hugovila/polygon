@@ -1,6 +1,7 @@
 
 require './polygon'
 require './triangle'
+require './isosceles'
 
 describe Polygon do
   let(:triangle) { Triangle.new }
@@ -40,6 +41,11 @@ describe Polygon do
     end
     it "returns its own perimeter" do
       expect(Triangle.new(2,5,4).perimeter).to eq(11)
+    end
+    describe Isosceles do
+      it "is a child of Polygon" do
+        expect(Isosceles.ancestors).to include(Polygon)
+      end
     end
   end
 end

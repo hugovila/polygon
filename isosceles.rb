@@ -1,0 +1,6 @@
+
+
+
+class Isosceles < Triangle
+
+end
