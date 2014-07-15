@@ -2,17 +2,18 @@
 
 class Triangle < Polygon
 
+  TRIANGLE_SIDES = 3
+
   def initialize *sides
-    check_sides sides
+    check_sides(sides, my_number_of_sides)
   end
     
   def my_number_of_sides
-      3
+      TRIANGLE_SIDES
   end
 
-  def check_sides sides
-    raise ArgumentError.new("too many sides") if sides.size > 3
-    raise ArgumentError.new("too few sides") if sides.size < 3
-  end
+
+
+  
 
 end
