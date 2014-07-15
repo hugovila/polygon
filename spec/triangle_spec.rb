@@ -20,6 +20,8 @@ describe Polygon do
     it "need to have 3 sides" do
       expect { Triangle.new(2,3,3,4) }.to raise_error(ArgumentError) 
     end
-    
+    it "should be closed" do
+      expect { Triangle.new(2,3,2) }.to raise_error(ArgumentError)
+    end
   end
 end
