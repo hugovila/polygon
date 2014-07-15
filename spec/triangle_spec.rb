@@ -38,5 +38,8 @@ describe Polygon do
       area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
       expect(Triangle.new(a,b,c).area).to eq(area)
     end
+    it "returns its own perimeter" do
+      expect(Triangle.new(2,5,4).perimeter).to eq(11)
+    end
   end
 end
