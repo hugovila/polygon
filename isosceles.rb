@@ -3,4 +3,6 @@
 
 class Isosceles < Triangle
 
+  
+
 end

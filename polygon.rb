@@ -1,8 +1,6 @@
 
 class Polygon
 
-  
-
   def perimeter
     result = 0
     @sides.collect { |side| result = result + side }
@@ -21,5 +19,5 @@ class Polygon
   def check_negative side
     raise ArgumentError.new("Sides should be positive sides") if side.arg != 0
   end
-
+  
 end
