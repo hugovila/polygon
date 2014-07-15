@@ -14,5 +14,6 @@ describe Polygon do
       sides_of_triangle = 3
       expect(Triangle.new.my_number_of_sides).to eq(sides_of_triangle)
     end
+    
   end
 end
