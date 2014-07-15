@@ -1,0 +1,7 @@
+
+class Triangle < Polygon
+
+  
+
+
+end
