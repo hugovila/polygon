@@ -12,8 +12,13 @@ describe Polygon do
     end
     it "should have 3 sides" do
       sides_of_triangle = 3
-      expect(Triangle.new.my_number_of_sides).to eq(sides_of_triangle)
+      expect(Triangle.new().my_number_of_sides).to eq(sides_of_triangle)
     end
-    
+    it "need to have 3 sides" do
+      expect(Triangle.new(2,3)).to raise_error(ArgumentError)
+    end
+    it "need to have 3 sides" do
+      expect(Triangle.new(2,3,3,4)).to raise_error(ArgumentError) 
+    end
   end
 end
