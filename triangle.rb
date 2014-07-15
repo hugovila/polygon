@@ -1,5 +1,5 @@
 
-class Triangle < Polygon
+class Triangle 
 
   
 
