@@ -32,11 +32,11 @@ describe Polygon do
       expect{ Triangle.new(2, 4, "lado") }.to raise_error(ArgumentError)
     end
     it "return its area" do
-      a = 4
+      a = 2
       b = 3
-      c = 3
+      c = 4
       area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
-      expect(Triangle.new(3,4,3).area).to eq(area)
+      expect(Triangle.new(a,b,c).area).to eq(area)
     end
   end
 end
