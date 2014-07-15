@@ -21,7 +21,7 @@ describe Polygon do
       expect { Triangle.new(2,3,3,4) }.to raise_error(ArgumentError) 
     end
     it "should be closed" do
-      expect { Triangle.new(2,3,2) }.to raise_error(ArgumentError)
+      expect { Triangle.new(2,3,7) }.to raise_error(ArgumentError)
     end
   end
 end
