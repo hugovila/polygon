@@ -15,11 +15,7 @@ class Triangle < Polygon
     check_positive sides
   end
 
-  def perimeter
-    result = 0
-    @sides.collect { |side| result = result + side }
-    result
-  end
+  
 
   def area
     0.25 * Math.sqrt( (@bigger_side+(@medium_sides+@smaller_side)) * (@smaller_side-(@bigger_side-@medium_sides)) * (@smaller_side+(@bigger_side-@medium_sides)) * (@bigger_side+(@medium_sides-@smaller_side)) )
