@@ -28,5 +28,8 @@ describe Polygon do
       expect{Triangle.new(-2,-3,4)}.to raise_error(ArgumentError)
       expect{Triangle.new(2,3,-4)}.to raise_error(ArgumentError)
     end
+    it "all sides should be numbers" do
+      expect{ Triangle.new(2, 4, "lado") }.to raise_error(ArgumentError)
+    end
   end
 end
