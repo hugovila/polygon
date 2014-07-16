@@ -34,6 +34,13 @@ describe Polygon do
 
         expect(Isosceles.new(iquals_sides,different_side).perimeter).to eq(perimeter)
       end
+      it "return its own area also" do
+        a = 2
+        b = 3
+        c = 3.605551275
+        area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
+        expect(Triangle.new(a,b,c).area).to eq(area)
+      end
     end
   end
 end
