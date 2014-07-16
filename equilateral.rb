@@ -3,4 +3,5 @@
 class Equilateral < Triangle
 
 
+
 end
