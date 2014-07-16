@@ -1,0 +1,7 @@
+
+
+class Quadrilateral < Polygon
+
+
+
+end
