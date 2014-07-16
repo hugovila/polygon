@@ -27,7 +27,13 @@ describe Polygon do
         
         expect{ Isosceles.new(iquals_sides, iquals_sides, different_side) }.to raise_error(ArgumentError)
       end
-      
+      it "have a perimeter" do
+        iquals_sides = 2
+        different_side = 3
+        perimeter = 7
+
+        expect(Isosceles.new(iquals_sides,different_side).perimeter).to eq(perimeter)
+      end
     end
   end
 end
