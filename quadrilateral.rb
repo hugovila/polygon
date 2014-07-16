@@ -2,6 +2,6 @@
 
 class Quadrilateral < Polygon
 
-
+  
 
 end

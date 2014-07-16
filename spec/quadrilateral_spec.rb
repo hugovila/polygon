@@ -8,7 +8,10 @@ describe Polygon do
     it "is a child of Polygon" do
         expect(Quadrilateral.ancestors).to include(Polygon)
     end
-    
+    it "should have 4 sides" do
+      sides_of_quadrilateral = 4
+      expect(Quadrilateral.new(2,3,4,5).my_number_of_sides).to eq(sides_of_quadrilateral)
+    end
 
   end
 end
