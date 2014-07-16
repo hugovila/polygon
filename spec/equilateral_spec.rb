@@ -26,7 +26,7 @@ describe Polygon do
       end
       it "have a perimeter" do
         iquals_sides = 2
-        perimeter = 7
+        perimeter = 6
 
         expect(Equilateral.new(iquals_sides).perimeter).to eq(perimeter)
       end
