@@ -7,7 +7,7 @@ class Triangle < Polygon
 
   def initialize *sides
     @sides = sides
-    check_sides(sides, my_number_of_sides)
+    check_sides(my_number_of_sides)
     @bigger_side = sides.max
     @smaller_side = sides.min
     @medium_sides = sides[1]

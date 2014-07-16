@@ -7,9 +7,9 @@ class Polygon
     result
   end
 
-  def check_sides(sides, polygon_sides)
-    raise ArgumentError.new("too many sides") if sides.size > polygon_sides
-    raise ArgumentError.new("too few sides") if sides.size < polygon_sides
+  def check_sides(polygon_sides)
+    raise ArgumentError.new("too many sides") if @sides.size > polygon_sides
+    raise ArgumentError.new("too few sides") if @sides.size < polygon_sides
   end
   
   def check_positive sides
