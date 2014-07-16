@@ -1,5 +1,7 @@
 
 
-class Quadrangle
+class Quadrangle < Polygon
+
+
 
 end
