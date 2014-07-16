@@ -35,7 +35,7 @@ describe Polygon do
     it "return its own area" do
       a = 2
       b = 3
-      c = 4
+      c = 3.605551275
       area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
       expect(Triangle.new(a,b,c).area).to eq(area)
     end
