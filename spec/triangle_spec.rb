@@ -1,7 +1,6 @@
 
 require './polygon'
 require './triangle'
-require './isosceles'
 
 describe Polygon do
   let(:triangle) { Triangle.new }
