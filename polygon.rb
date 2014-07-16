@@ -2,9 +2,7 @@
 class Polygon
 
   def perimeter
-    result = 0
-    @sides.collect { |side| result = result + side }
-    result
+    @sides.inject { |perimeter, side| perimeter += side }
   end
 
   def check_sides(polygon_sides)
