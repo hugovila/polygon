@@ -1,6 +1,6 @@
 
 
-class Equilateral
+class Equilateral < Triangle
 
 
 end
