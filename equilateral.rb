@@ -1,0 +1,6 @@
+
+
+class Equilateral
+
+
+end
