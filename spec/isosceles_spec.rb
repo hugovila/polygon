@@ -27,6 +27,17 @@ describe Polygon do
         
         expect{ Isosceles.new(iquals_sides, iquals_sides, different_side) }.to raise_error(ArgumentError)
       end
+      it "should be closed" do
+        expect { Isosceles.new(2,4) }.to raise_error(ArgumentError)
+      end
+      it "sides should have positive numbers" do
+        expect{Isosceles.new(-3,3)}.to raise_error(ArgumentError)
+        expect{Isosceles.new(-2,3)}.to raise_error(ArgumentError)
+        expect{Isosceles.new(-4,2)}.to raise_error(ArgumentError)
+      end
+      it "all sides should be numbers" do
+        expect{ Isosceles.new("lado") }.to raise_error(ArgumentError)
+      end
       it "have a perimeter" do
         iquals_sides = 2
         different_side = 3
@@ -36,10 +47,10 @@ describe Polygon do
       end
       it "return its own area also" do
         a = 2
-        b = 3
+        b = 2
         c = 3.605551275
         area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
-        expect(Triangle.new(a,b,c).area).to eq(area)
+        expect(Isosceles.new(a,c).area).to eq(area)
       end
     end
   end

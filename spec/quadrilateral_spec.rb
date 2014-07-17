@@ -29,6 +29,8 @@ describe Polygon do
     it "all sides should be numbers" do
       expect{ Quadrilateral.new(2, 4, "lado", 5) }.to raise_error(ArgumentError)
     end
-    
+    it "returns its own perimeter" do
+      expect(Quadrilateral.new(2,5,4,5).perimeter).to eq(16)
+    end
   end
 end

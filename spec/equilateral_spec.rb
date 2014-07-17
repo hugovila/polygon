@@ -24,6 +24,17 @@ describe Polygon do
         
         expect{ Equilateral.new(iquals_sides, iquals_sides) }.to raise_error(ArgumentError)
       end
+      it "should be closed" do
+        expect { Equilateral.new(2,3) }.to raise_error(ArgumentError)
+      end
+      it "sides should have positive numbers" do
+        expect{Equilateral.new(2,-3)}.to raise_error(ArgumentError)
+        expect{Equilateral.new(-2,-3)}.to raise_error(ArgumentError)
+        expect{Equilateral.new(3,-4)}.to raise_error(ArgumentError)
+      end
+      it "all sides should be numbers" do
+        expect{ Equilateral.new(2, "lado") }.to raise_error(ArgumentError)
+      end
       it "have a perimeter" do
         iquals_sides = 2
         perimeter = 6
@@ -35,7 +46,7 @@ describe Polygon do
         b = 2
         c = 2
         area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
-        expect(Triangle.new(a,b,c).area).to eq(area)
+        expect(Equilateral.new(a).area).to eq(area)
       end
     end
   end
