@@ -21,5 +21,11 @@ describe Polygon do
     it "should be closed" do
       expect { Quadrilateral.new(2,3,7,2) }.to raise_error(ArgumentError)
     end
+    it "sides should have positive numbers" do
+      expect{Quadrilateral.new(2,-3,4,1)}.to raise_error(ArgumentError)
+      expect{Quadrilateral.new(-2,-3,4,-1)}.to raise_error(ArgumentError)
+      expect{Quadrilateral.new(2,3,-4,-5)}.to raise_error(ArgumentError)
+    end
+    
   end
 end
