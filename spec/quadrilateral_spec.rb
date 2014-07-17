@@ -26,6 +26,9 @@ describe Polygon do
       expect{Quadrilateral.new(-2,-3,4,-1)}.to raise_error(ArgumentError)
       expect{Quadrilateral.new(2,3,-4,-5)}.to raise_error(ArgumentError)
     end
+    it "all sides should be numbers" do
+      expect{ Quadrilateral.new(2, 4, "lado", 5) }.to raise_error(ArgumentError)
+    end
     
   end
 end
