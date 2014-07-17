@@ -36,7 +36,7 @@ describe Polygon do
       b = 3
       c = 3.605551275
       area = 0.25 * Math.sqrt( (a+(b+c)) * (c-(a-b)) * (c+(a-b)) * (a+(b-c)) )
-      expect(Triangle.new(a,b,c).area).to eq(area)
+      expect(Triangle.new(a,b,c).area).to eq(3)
     end
     it "returns its own perimeter" do
       expect(Triangle.new(2,5,4).perimeter).to eq(11)
