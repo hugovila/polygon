@@ -15,5 +15,11 @@ describe Polygon do
     it "need to have 4 sides" do
       expect { Quadrilateral.new(2,3) }.to raise_error(ArgumentError)
     end
+    it "need to have 4 sides" do
+      expect { Quadrilateral.new(2,3,6,5,4) }.to raise_error(ArgumentError)
+    end
+    it "should be closed" do
+      expect { Quadrilateral.new(2,3,7,2) }.to raise_error(ArgumentError)
+    end
   end
 end
