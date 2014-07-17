@@ -20,6 +20,10 @@ describe Polygon do
           one_ancestor_to_expect = Quadrilateral
           expect(Square.ancestors).to include(one_ancestor_to_expect)
         end
+        it "is a child of Parallelogram" do
+          one_ancestor_to_expect = Parallelogram
+          expect(Square.ancestors).to include(one_ancestor_to_expect)
+        end
       end
     end
   end
