@@ -2,8 +2,8 @@
 
 class Isosceles < Triangle
 
-  def initialize iqual_sides, unique_sides
-    super iqual_sides, iqual_sides, unique_sides
+  def initialize equal_sides, unique_sides
+    super equal_sides, equal_sides, unique_sides
   end
 
 end

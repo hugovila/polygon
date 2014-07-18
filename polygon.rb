@@ -3,9 +3,11 @@ class Polygon
 
   def initialize *sides
     @sides = sides
+    check_float
     check_sides(my_number_of_sides)
     check_closed
     check_positive sides
+    
   end
 
   def perimeter
@@ -29,11 +31,18 @@ class Polygon
     raise ArgumentError.new("Sides should be positive sides") if side.arg != 0
   end
   
-   def check_closed
+  def check_closed
     max_side = @sides.max
     closed = (perimeter - max_side) > max_side
     raise ArgumentError.new("Polygon not closed") unless closed
-   end
+  end
 
+  def check_float
+    @sides.each { |side| raise_error_if_not_a_float_number side }
+  end
+
+  def raise_error_if_not_a_float_number side
+    raise ArgumentError.new("Not a float number") if side.to_f.class != Float
+  end
 
 end
