@@ -33,7 +33,7 @@ describe Polygon do
         expect{Equilateral.new(3,-4)}.to raise_error(ArgumentError)
       end
       it "all sides should be numbers" do
-        expect{ Equilateral.new(2, "lado") }.to raise_error(ArgumentError)
+        expect{ Equilateral.new("lado") }.to raise_error(ArgumentError)
       end
       it "have a perimeter" do
         iquals_sides = 2

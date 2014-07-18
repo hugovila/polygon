@@ -36,7 +36,7 @@ describe Polygon do
         expect{Isosceles.new(-4,2)}.to raise_error(ArgumentError)
       end
       it "all sides should be numbers" do
-        expect{ Isosceles.new("lado") }.to raise_error(ArgumentError)
+        expect{ Isosceles.new("lado",3) }.to raise_error(ArgumentError)
       end
       it "have a perimeter" do
         iquals_sides = 2
